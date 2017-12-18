@@ -1,23 +1,13 @@
 .THIS {
     width: 100%;
-    height: 700px;
-    overflow: hidden;
-    position: relative;
 }
 
 .THIS .hero-image {
+    position: relative;
+    padding: 250px 30px;
+	overflow: hidden;
 	width: 100%;
-	height: 100%;
 	background-size: cover;
-}
-
-.THIS .chHeroContent {
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	padding: 300px 40px;
 }
 
 .THIS .chHeroOverlay {
@@ -27,8 +17,26 @@
 	right: 0;
 	bottom: 0;
 	background-color: rgba(0,0,0,0.5);
-
+	z-index: 1;
 }
+
+.THIS .chHeroContent {
+	position: relative;
+	z-index: 2;
+}
+
+/* Center Align */
+.THIS .chHeroContent.chAlign-center .chHeroSearch {
+	margin: 0 auto;
+	text-align: center;
+}
+
+/* Right Align */
+.THIS .chHeroContent.chAlign-right .chHeroSearch {
+	text-align: right;
+	float: right;
+}
+
 
 .THIS .chHeroSearch {
   	color: #fff;

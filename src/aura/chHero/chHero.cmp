@@ -8,10 +8,11 @@
 
 
     <div class="chHero">
-        <div class="hero-image" style="background-image: url('/sfsites/c/resource/1512991877000/tempHero');" ></div>
-        <div class="chHeroOverlay"></div>
-        <div class="chHeroContent">
-            <c:chHeroSearch showEyebrow="{!v.showEyebrow}" eyebrowText="{!v.eyebrowText}" showHeadline="{!v.showHeadline}" headlineText="{!v.headlineText}" searchPlaceholder="{!v.searchPlaceholder}" searchAlignment="{!v.searchAlignment}" />
+        <div class="hero-image" style="background-image: url('/sfsites/c/resource/1512991877000/tempHero');" >
+            <div class="chHeroOverlay"></div>
+             <div class="{!'chHeroContent chAlign-'+ v.searchAlignment}">
+                <c:chHeroSearch showEyebrow="{!v.showEyebrow}" eyebrowText="{!v.eyebrowText}" showHeadline="{!v.showHeadline}" headlineText="{!v.headlineText}" searchPlaceholder="{!v.searchPlaceholder}" />
+            </div>  
         </div>
     </div>
 </aura:component>
