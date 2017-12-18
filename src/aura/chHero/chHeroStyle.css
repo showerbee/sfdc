@@ -4,7 +4,6 @@
 
 .THIS .hero-image {
     position: relative;
-    padding: 250px 30px;
 	overflow: hidden;
 	width: 100%;
 	background-size: cover;
@@ -68,4 +67,20 @@
 
 .THIS .chHeroSearch input:focus {
 	outline: none;
+}
+
+/* Search Styles */
+.THIS .searchStyle-style1 input {
+	background: none;
+	border: 1px solid #fff;
+	color: #fff;
+}
+
+/* Search Styles */
+.THIS .searchStyle-style2 input {
+	background: none;
+	border: 1px solid #fff;
+	border-radius: 20px;
+	color: #fff;
+
 }
