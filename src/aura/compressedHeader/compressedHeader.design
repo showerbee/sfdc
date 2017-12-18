@@ -1,0 +1,17 @@
+<design:component label="Compressed Header">
+	<design:attribute name="headerHeight" label="Header Padding"/>
+    <design:attribute name="headerColor" label="Header Color" />
+    <design:attribute name="headerOpacity" label="Header Opacity" />
+    <design:attribute name="logoSize" label="Logo Size" />
+    <design:attribute name="showProfileMenu" label="Show Profile Menu" />
+    <design:attribute name="showNotifications" label="Show Notifications" />
+    <design:attribute name="showSearch" label="Show Search" />
+    <design:attribute name="navAlignment" label="Navigation Alignment" datasource="left,right,center,distributed"/>
+    <design:attribute name="headerSticky" label="Sticky Header" datasource="fixed, static" />
+    <design:attribute name="navItemThreshold" label="Nav Item Threshold" />
+    <design:attribute name="backgroundImage" label="Use Background Image" />
+    <design:attribute name="backgroundPosition" label="Background Position" datasource="topLeft,topRight,bottomLeft,bottomRight"/>
+    <design:attribute name="backgroundRepeat" label="Background Repeat" datasource="repeat,noRepeat"/>
+    <design:attribute name="backgroundSize" label="Background Size" datasource="contain, cover"/>
+    <design:attribute name="containHeader" label="Header Containment" datasource="container, noContainer"/>
+</design:component>

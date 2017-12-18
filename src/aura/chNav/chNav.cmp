@@ -1,0 +1,27 @@
+<!-- chNav -->
+<aura:component extends="forceCommunity:navigationMenuBase">
+    <aura:attribute name="navAlignment" type="String" />
+    <aura:attribute name="navItemThreshold" type="Integer" />
+    <aura:attribute name="hiddenNav" type="Map" />
+    <aura:attribute name="firstLoad" type="Boolean" default="true" />
+
+    <!-- Handlers -->
+    <aura:handler name="change" value="{!v.menuItems}" action="{!c.menuItemsLoaded}"/>
+    <aura:handler event="c:navResizeEvent" action="{!c.handleResizeEvent}"/>
+
+    <div class="chNavContainer">
+        <ul aura:id="mainNav" class="{!'visible-links chNav-align-' + v.navAlignment}" onclick="{!c.navigate}">
+            <aura:iteration items="{!v.menuItems}" var="item" indexVar="itemIndex">
+                <li class="{!v.menuItems.length-1 == itemIndex ? 'mainNavItem last' : 'mainNavItem'}"><a data-menu-item-id="{!item.id}" href="">{!item.label}</a></li>
+            </aura:iteration>
+            <li class="chNavMoreLink hidden mainNavItem"><a href="#" onclick="{!c.toggleItems}">More <lightning:icon variant="inverse" iconName="utility:chevrondown" size="xx-small"/></a>
+                <ul class='hidden-links hidden' onclick="{!c.navigate}">
+                    <aura:iteration items="{!v.hiddenNav}" var="item">
+                        <li><a data-menu-item-id="{!item.id}" href="">{!item.label}</a></li>
+                    </aura:iteration>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+</aura:component>

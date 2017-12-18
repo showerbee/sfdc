@@ -1,0 +1,45 @@
+<!-- compressedHeader -->
+<aura:component implements="forceCommunity:availableForAllPageTypes">
+    <!-- Attributes -->
+    <aura:attribute name="headerHeight" type="String" default="50px" />
+    <aura:attribute name="headerColor" type="String" default="#000000" />
+    <aura:attribute name="headerOpacity" type="Integer" default="100" />
+    <aura:attribute name="logoSize" type="String" default="150px" />
+    <aura:attribute name="showProfileMenu" type="Boolean" default="true" />
+    <aura:attribute name="showNotifications" type="Boolean" default="true" />
+    <aura:attribute name="showSearch" type="Boolean" default="true" />
+    <aura:attribute name="navAlignment" type="String" default="left" />
+    <aura:attribute name="navItemThreshold" type="Integer" default="8" />
+    <aura:attribute name="headerSticky" type="String" default="static" />
+    <aura:attribute name="backgroundImage" type="Boolean" default="false" />
+    <aura:attribute name="backgroundPosition" type="String" default="topLeft" />
+    <aura:attribute name="backgroundRepeat" type="String" default="noRepeat" />
+    <aura:attribute name="backgroundSize" type="String" default="cover" />
+	<aura:attribute name="containHeader" type="String" default="noContainer" />
+
+    <div class="{!'chHeader header-' + v.headerSticky + ' ' + v.backgroundPosition + ' ' + v.backgroundRepeat + ' ' + v.containHeader}" style="{!'padding-top:' + v.headerHeight + '; padding-bottom:' + v.headerHeight + '; background-color:' + v.headerColor + v.headerOpacity + ';'}">
+        <div class="chHeaderInner">
+            <div class="chLogo"><a href="/s/" style="{!'width:' + v.logoSize + ';'}"><img src="{!$Resource.brandLogo}" /></a></div>
+
+            <div class="chNav">
+                <c:chNav navAlignment="{!v.navAlignment}" navItemThreshold="{!v.navItemThreshold}" />
+            </div>
+
+            <div class="chUtils">
+                <aura:if isTrue="{!v.showSearch}">
+                    <div class="chUtil"><c:chSearch /></div>
+                </aura:if>
+
+                <aura:if isTrue="{!v.showNotifications}">
+                    <div class="chUtil"><forceCommunity:notifications /></div>
+                </aura:if>
+
+                <aura:if isTrue="{!v.showProfileMenu}">
+                    <div class="chUtil"><c:chProfileMenu /></div>
+                </aura:if>
+
+            </div>
+        </div>
+    </div>
+
+</aura:component>

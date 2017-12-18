@@ -1,0 +1,17 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes">
+    <aura:attribute name="showEyebrow" type="Boolean" default="true" />
+    <aura:attribute name="eyebrowText" type="String" default="We're Here To Help" />
+    <aura:attribute name="showHeadline" type="Boolean" default="true" />
+    <aura:attribute name="headlineText" type="String" default="All you have to do is ask." />
+    <aura:attribute name="searchPlaceholder" type="String" default="Ask a question or search by keyword ..." />
+    <aura:attribute name="searchAlignment" type="String" default="center" />
+
+
+    <div class="chHero">
+        <div class="hero-image" style="background-image: url('/sfsites/c/resource/1512991877000/tempHero');" ></div>
+        <div class="chHeroOverlay"></div>
+        <div class="chHeroContent">
+            <c:chHeroSearch showEyebrow="{!v.showEyebrow}" eyebrowText="{!v.eyebrowText}" showHeadline="{!v.showHeadline}" headlineText="{!v.headlineText}" searchPlaceholder="{!v.searchPlaceholder}" searchAlignment="{!v.searchAlignment}" />
+        </div>
+    </div>
+</aura:component>

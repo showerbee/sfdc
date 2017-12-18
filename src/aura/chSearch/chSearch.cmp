@@ -1,0 +1,21 @@
+<aura:component implements="forceCommunity:searchInterface">
+    
+    <lightning:buttonIcon iconName="utility:search" size="medium" variant="bare-inverse" alternativeText="Search" onclick="{!c.toggleSearch}"/>
+    
+    <div class="chSearchOverlay hidden">
+        <div class="slds-form-element slds-lookup" data-select="single">
+            <div class="slds-form-element__control">
+                <div class="slds-input-has-icon slds-input-has-icon--right">
+                    <lightning:buttonIcon iconName="utility:search" size="large" variant="bare" onclick="{! c.handleClick }" alternativeText="Search" class="slds-input__icon" />
+                    <input id="headerSearch" type="search" class="slds-lookup__search-input slds-input" placeholder="Search" />
+                </div>
+            </div>
+        </div>
+        
+        <lightning:buttonIcon iconName="utility:close" size="large" variant="bare" onclick="{! c.toggleSearch }" alternativeText="Close" class="closeSearch slds-input__icon" />
+
+        
+    </div>
+    
+    
+</aura:component>

@@ -1,0 +1,89 @@
+.THIS ul.visible-links {
+    display: flex;
+}
+
+.THIS ul.visible-links li {
+    padding-right: 60px;
+}
+
+.THIS ul.visible-links li.last {
+    padding-right: 0;
+}
+
+.THIS ul li a {
+    color: #fff;
+}
+
+.THIS ul li.chNavMoreLink {
+    position: relative;
+    padding-left: 60px;
+    padding-right: 20px;
+}
+
+.THIS .chNavMoreLink a {
+    color: #fff;
+}
+
+.THIS .chNavMoreLink a .slds-icon_container {
+    padding-left: 7px;
+}
+
+.THIS .chNavMoreLink ul {
+    position: absolute;
+    top: 130%;
+    left: -5px;
+    background: #fff;
+    z-index: 10;
+    width: 200px;
+}
+
+.THIS .chNavMoreLink ul li {
+    padding: 10px 40px 10px 10px;
+    border-bottom: 1px solid #efefef;
+    display: block;
+    width: 100%;
+}
+
+.THIS .chNavMoreLink ul li:hover {
+    background: #EBF6FC;
+}
+
+.THIS .chNavMoreLink ul li a {
+    color: #333;
+}
+
+.THIS .chNavMoreLink ul li a:hover {
+    text-decoration: none;
+}
+
+.THIS .chUtil button {
+    width: 18px !important;
+    height: 18px !important;
+}
+
+/* Nav Alignments */
+.THIS ul.chNav-align-left {
+	justify-content: flex-start;
+}
+
+.THIS ul.chNav-align-right {
+	justify-content: flex-end;
+}
+
+.THIS ul.chNav-align-center {
+	justify-content: center;
+}
+
+.THIS ul.chNav-align-distributed {
+	justify-content: space-evenly;
+}
+
+.THIS ul.chNav-align-distributed li {
+	margin-right: 0;
+}
+
+.THIS .hidden-menu {
+    position: absolute;
+    right: 0;
+    top: 0;
+}

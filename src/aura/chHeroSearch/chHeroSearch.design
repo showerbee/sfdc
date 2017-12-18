@@ -1,0 +1,7 @@
+<design:component >
+	<design:attribute name="showEyebrow" label="Show Eyebrow" />
+	<design:attribute name="eyebrowText" label="Eyebrow Text" />
+	<design:attribute name="showHeadline" label="Show Headline" />
+	<design:attribute name="headlineText" label="Headline Text" />
+	<design:attribute name="searchPlaceholder" label="Search Placeholder Text" />
+</design:component>

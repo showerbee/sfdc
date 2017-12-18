@@ -1,0 +1,38 @@
+<!-- themeFino -->
+<aura:component implements="forceCommunity:themeLayout">
+    <!-- Events -->
+    <aura:registerEvent name="navResize" type="c:navResizeEvent"/>
+
+    <!-- Attributes -->
+    <aura:attribute name="header" type="Aura.Component[]" description="Header Region"/>
+    <aura:attribute name="hero" type="Aura.Component[]" description="Hero Region"/>
+    <aura:attribute name="footer" type="Aura.Component[]" description="Footer Region" />
+    <aura:attribute name="heroUnderNav" type="Boolean" description="Hero Under Nav" />
+    <aura:attribute name="heroMarginTop" type="Integer" default="0" />
+    <aura:attribute name="contain" type="Boolean" default="false"/>
+
+    <!-- Handlers -->
+    <aura:handler name="init" value="{!this}" action="{!c.onInit}" />
+    <aura:handler name="render" value="{!this}" action="{!c.onRender}"/>
+
+    <div class="finoThemeWrapper">
+        
+        <div class="header">
+            {!v.header}
+        </div>
+
+        <div class="hero" style="{!'margin-top: -'+ v.heroMarginTop +'px;'}">
+            {!v.hero}
+        </div>
+
+        <div class="body">
+            {!v.body}
+        </div>
+
+        <div class="footer">
+            {!v.footer}
+        </div>
+        
+    </div>
+
+</aura:component>

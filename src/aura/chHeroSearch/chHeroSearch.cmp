@@ -1,0 +1,22 @@
+<aura:component >
+	<aura:attribute name="showEyebrow" type="Boolean" default="true" />
+	<aura:attribute name="eyebrowText" type="String" default="We're Here To Help" />
+	<aura:attribute name="showHeadline" type="Boolean" default="true" />
+	<aura:attribute name="headlineText" type="String" default="All you have to do is ask." />
+	<aura:attribute name="searchPlaceholder" type="String" default="Ask a question or search by keyword ..." />
+	<aura:attribute name="searchAlignment" type="String" default="center" />
+
+	<div class="chHeroSearch" style="{!'text-align: ' + v.searchAlignment + ';' }">
+
+			<aura:if isTrue="{!v.showEyebrow}">
+				<h4>{!v.eyebrowText}</h4>
+			</aura:if>
+
+			<aura:if isTrue="{!v.showHeadline}">
+				<h2>{!v.headlineText}</h2>
+			</aura:if>
+
+			<input type="text" placeholder="{!v.searchPlaceholder}"/>
+
+		</div>
+</aura:component>

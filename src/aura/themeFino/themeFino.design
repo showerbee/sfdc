@@ -1,0 +1,4 @@
+<design:component label="Fino Theme Layout">
+		<design:attribute name="contain" label="Container"/>
+		<design:attribute name="heroUnderNav" label="Hero Under Nav" />
+</design:component>

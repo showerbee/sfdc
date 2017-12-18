@@ -1,0 +1,4 @@
+<!-- c:updateNavEvent -->
+<aura:event type="COMPONENT">
+	<aura:attribute name="operation" type="String" />
+</aura:event>
